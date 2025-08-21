@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mini Game Challenge 🎮</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="app">
-    <!-- Welcome Screen -->
-    <div id="welcome">
-      <h1>🎉 Mini Game Challenge 🎉</h1>
-      <p>Complete 10 mini-games, 1 minute each. Score: 10 marks per game!</p>
-      <button onclick="startChallenge()">Start</button>
-    </div>
+    <!-- Welcome -->
+    <section id="welcome" class="card">
+      <h1>🎯 Mini Game Challenge</h1>
+      <p>10 hard mini-games. 1 minute each. Finish to earn full 10 marks; otherwise score = completion % × 10.</p>
+      <button id="startBtn">Start Challenge</button>
+    </section>
 
-    <!-- Game HUD -->
-    <div id="hud" class="hidden">
-      <p>Game <span id="gameNumber">1</span> / 10</p>
-      <p>⏱ Time: <span id="timer">60</span>s</p>
-      <p>⭐ Score: <span id="score">0</span></p>
-    </div>
+    <!-- HUD -->
+    <section id="hud" class="card hidden">
+      <div class="hud-row">
+        <div>Game <span id="gameNumber">1</span> / 10</div>
+        <div>⏱ <span id="timer">60</span>s</div>
+        <div>⭐ Score: <span id="score">0</span> / 100</div>
+      </div>
+      <div id="gameTitle" class="title"></div>
+      <div id="gameArea" class="game-area"></div>
+      <div id="hint" class="hint"></div>
+    </section>
 
-    <!-- Game Area -->
-    <div id="gameArea"></div>
-
-    <!-- Final Screen -->
-    <div id="final" class="hidden">
-      <h2>Your Final Score: <span id="finalScore"></span>/100</h2>
-      <button onclick="restart()">Play Again</button>
-    </div>
+    <!-- Final -->
+    <section id="final" class="card hidden">
+      <h2>🏆 Challenge Complete!</h2>
+      <p>Your Final Score: <span id="finalScore">0</span> / 100</p>
+      <button id="restartBtn">Play Again</button>
+    </section>
   </div>
 
   <script src="script.js"></script>
