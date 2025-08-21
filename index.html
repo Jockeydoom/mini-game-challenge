@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Game Challenge 🎮</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Welcome Screen -->
+    <div id="welcome">
+      <h1>🎉 Mini Game Challenge 🎉</h1>
+      <p>Complete 10 mini-games, 1 minute each. Score: 10 marks per game!</p>
+      <button onclick="startChallenge()">Start</button>
+    </div>
+
+    <!-- Game HUD -->
+    <div id="hud" class="hidden">
+      <p>Game <span id="gameNumber">1</span> / 10</p>
+      <p>⏱ Time: <span id="timer">60</span>s</p>
+      <p>⭐ Score: <span id="score">0</span></p>
+    </div>
+
+    <!-- Game Area -->
+    <div id="gameArea"></div>
+
+    <!-- Final Screen -->
+    <div id="final" class="hidden">
+      <h2>Your Final Score: <span id="finalScore"></span>/100</h2>
+      <button onclick="restart()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
